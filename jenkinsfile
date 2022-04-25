@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout branch') {
             steps {
                 git branch: 'master',
-                url: "https://github.com/iamvickyav/spring-boot-data-H2-embedded.git"
+                url: "https://github.com/aliya1928/project.git"
             }
         }
         stage('Test') {
