@@ -2,14 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout branch') {
             steps {
-                echo 'Building..'
+                git branch: 'master',
+                url: "https://github.com/iamvickyav/spring-boot-data-H2-embedded.git"
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'mvn test'
             }
         }
         stage('Deploy') {
