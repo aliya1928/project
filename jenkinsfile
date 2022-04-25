@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout branch') {
             steps {
-                sh "git clone "https://github.com/aliya1928/project.git""
+                checkout scm
             }
         }
         stage('Test') {
